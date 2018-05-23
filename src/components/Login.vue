@@ -83,7 +83,7 @@ export default {
       let self = this
 
       axios
-        .post('http://localhost:3000/register', {
+        .post('http://blog.ihsanmaulanahamdani.club/register', {
           name: self.name,
           email: self.email,
           password: self.password
@@ -109,7 +109,7 @@ export default {
       let self = this
 
       axios
-        .post('http://localhost:3000/login', {
+        .post('http://blog.ihsanmaulanahamdani.club/login', {
           email: self.email,
           password: self.password
         })

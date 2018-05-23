@@ -21,7 +21,7 @@ export default new Vuex.Store({
   actions: {
     postArticle ({ commit }, inputData) {
       axios
-        .post('http://localhost:3000/articles', inputData, {
+        .post('http://blog.ihsanmaulanahamdani.club/articles', inputData, {
           headers: {
             token: localStorage.getItem('token')
           }
@@ -35,7 +35,7 @@ export default new Vuex.Store({
             timer: 1500
           })
           axios
-            .get('http://localhost:3000/articles', {
+            .get('http://blog.ihsanmaulanahamdani.club/articles', {
               headers: {
                 token: localStorage.getItem('token')
               }
@@ -50,7 +50,7 @@ export default new Vuex.Store({
     },
     getAllArticles ({ commit }) {
       axios
-        .get('http://localhost:3000/articles', {
+        .get('http://blog.ihsanmaulanahamdani.club/articles', {
           headers: {
             token: localStorage.getItem('token')
           }
@@ -78,7 +78,7 @@ export default new Vuex.Store({
       }).then((result) => {
         if (result.value) {
           axios
-            .delete(`http://localhost:3000/articles/delete/${id}`, {
+            .delete(`http://blog.ihsanmaulanahamdani.club/articles/delete/${id}`, {
               headers: {
                 token: localStorage.getItem('token'),
                 author: localStorage.getItem('id')
@@ -91,7 +91,7 @@ export default new Vuex.Store({
                 'success'
               )
               axios
-                .get('http://localhost:3000/articles', {
+                .get('http://blog.ihsanmaulanahamdani.club/articles', {
                   headers: {
                     token: localStorage.getItem('token')
                   }
@@ -108,7 +108,7 @@ export default new Vuex.Store({
     },
     updateArticle ({ commit }, objInput) {
       axios
-        .put(`http://localhost:3000/articles/update/${objInput.id}`, {
+        .put(`http://blog.ihsanmaulanahamdani.club/articles/update/${objInput.id}`, {
           title: objInput.title,
           content: objInput.content
         }, {

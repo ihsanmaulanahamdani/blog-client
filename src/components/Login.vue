@@ -44,7 +44,7 @@
               <form>
                 <div class="form-group">
                   <label for="inputName">Name</label>
-                  <input type="text" class="form-control" v-model="name" placeholder="name">
+                  <input type="text" class="form-control" v-model="name" placeholder="Name">
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">Email</label>

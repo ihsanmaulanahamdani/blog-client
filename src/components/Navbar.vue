@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-info d-flex justify-content-between">
-    <a class="remove-underline text-white" data-toggle="modal" data-target="#modalPostArticle"><i class="fas fa-location-arrow"></i> POST</a>
+    <div v-if="token">
+      <a class="remove-underline text-white" data-toggle="modal" data-target="#modalPostArticle"><i class="fas fa-location-arrow"></i> POST</a>
+    </div>
         <div class="modal fade" id="modalPostArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
